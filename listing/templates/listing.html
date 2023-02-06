@@ -1,6 +1,14 @@
- {% for i in listing  %}
+ {% extends "base.html" %}
+ {% block content %}
+  {% for i in listing  %}
+  <div class = "mt-2 md-2 px-3 py-2 bg-gray-100 rounded-sm">
+  <h3 class  ="text-3xl text-gray-900">{{i.title}}</h3>
 
- <a href = "/listing/{{i.id}}">{{i.title}}</a>
- 
+  <img src= "{{i.image.url}}" />  
+ <a href = "/listing/{{i.id}}" class = "text-blue-500 ">View details</a>
+  </div>
  
  {% endfor %}
+
+ <a href="/create/" class = "text-blue-600">Create a New list</a>
+ {% endblock content %}

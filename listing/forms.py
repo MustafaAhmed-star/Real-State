@@ -7,9 +7,10 @@ class ListingForm(ModelForm):
         model = Listing
         fields =[
     "title",  
-     "price",
+    "price",
     "num_beds",
     "num_bathes",
-   "square_footage",
-   "address",
+    "square_footage",
+    "address",
+    "image",
            ]
